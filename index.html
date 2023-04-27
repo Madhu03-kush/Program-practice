@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page</title>
+  </head>
+  <script type="text/javascript">
+    function convert() {
+      let km = document.getElementById("input").value
+      let fact = 0.621371
+      let miles = km * fact
+      // console.log(miles)
+      document.getElementById("result").innerText = `${miles}`
+    }
+  </script>
+
+  <body>
+    <input type="number" id="input" placeholder="enter number" />
+    <button onClick="convert()">convert</button>
+    <h1 id="result"></h1>
+    miles
+  </body>
+</html>

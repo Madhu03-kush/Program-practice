@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <script>
+      function calculus() {
+        let first = document.getElementById("first").value
+        first = Number.parseInt(first)
+        let second = document.getElementById("second").value
+        second = Number.parseInt(second)
+        let third = document.getElementById("third").value
+        switch (third) {
+          case "+":
+            let add = first + second
+            document.getElementById("result").innerText = `${add}`
+            break
+          case "-":
+            let sub = first - second
+            document.getElementById("result").innerText = `${sub}`
+            break
+          case "x":
+            let multi = first * second
+            document.getElementById("result").innerText = `${multi}`
+            break
+          case "/":
+            let divide = first / second
+            document.getElementById("result").innerText = `${divide}`
+            break
+          default:
+            document.getElementById("result").innerText = `type correct number`
+        }
+      }
+    </script>
+    <style>
+      .first {
+        background-color: orchid;
+        height: 40px;
+        width: 100px;
+      }
+      #result {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>first number</h1>
+      <input
+        class="first"
+        type="number"
+        id="first"
+        placeholder="enter first number"
+      />
+      <br />
+      <h1>second number</h1>
+      <input
+        class="first"
+        type="number"
+        id="second"
+        placeholder="enter 2nd number"
+      /><br />
+      <h1>Type sign = '+' '-' 'x' '/'</h1>
+
+      <input class="first" type="text" id="third" placeholder="+,-,x,/" />
+      <button onClick="calculus()">calculate</button>
+      <h1 id="result"></h1>
+    </div>
+  </body>
+</html>
